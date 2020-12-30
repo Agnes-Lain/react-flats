@@ -1,21 +1,23 @@
 import React from 'react';
 import Card from "./card";
 
-class CardList extends React.Component {
 
-  render () {
+const CardList = (props) => {
+  return props.flats.map((flat, index) => {
     return (
-        this.props.flats.map(flat => <Card
-          bg={flat.imageUrl}
-          name={flat.name}
-          price={flat.price}
-          currency={flat.priceCurrency}
-          lat={flat.lat}
-          lng={flat.lng}
-          key={flat.name}
-        />)
+      <Card
+        bg={flat.imageUrl}
+        name={flat.name}
+        price={flat.price}
+        currency={flat.priceCurrency}
+        selectFlat={props.selectFlat}
+        selected={flat.name === props.selectedFlat.name}
+        key={flat.lat}
+        index={index}
+      />
     );
-  }
-}
+  });
+};
+
 
 export default CardList;

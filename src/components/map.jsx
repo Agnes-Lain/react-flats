@@ -8,7 +8,7 @@ const SimpleMap = ({ center, selectFlat }) => {
     // Important! Always set the container height explicitly
     <div style={{ height: '100vh', width: '100%' }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyB4bsPue6Exv6YD7hKSk3S8PwSYMxnVgwQ" }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY }}
         defaultCenter={{ lat: 48.884211, lng: 2.34689 }}
         center={center()}
         defaultZoom={11}

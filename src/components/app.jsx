@@ -3,7 +3,6 @@ import CardList from "./card_list";
 import flats from "../data/flats";
 import SimpleMap from "./map";
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
